@@ -15,6 +15,7 @@ public class IntPair {
         return this.y;
     }
 
+    //equalsメソッドのオーバーライド
     public boolean equals(Object intPair) {
         if (intPair == this) {
             return true;
@@ -24,6 +25,5 @@ public class IntPair {
             return (this.x == testintPair.x) && (this.y == testintPair.y);
         }
         return false;
-        //return (this.x == intPair.x)&&(this.y == intPair.y);
     }
 }

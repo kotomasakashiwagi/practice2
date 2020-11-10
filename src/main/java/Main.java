@@ -16,7 +16,7 @@ public class Main {
             Calculator.printAverageXY();
         }
         if (args[0].equals("2-6")) {
-            WordPrinter.printWord();
+            DaysCalculator.printDays();
         }
     }
 }

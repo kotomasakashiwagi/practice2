@@ -4,8 +4,7 @@ public class WordPrinter {
     public static String scanWord() {
         System.out.println("文字xを入力してください。");
         Scanner scan = new Scanner(System.in);
-        String x = String.valueOf(scan.next());
-        return x;
+        return String.valueOf(scan.next());
     }
 
     public static void printWord() {
@@ -19,8 +18,7 @@ public class WordPrinter {
     public static int scanInt() {
         System.out.println("数字xを入力してください。");
         Scanner scan = new Scanner(System.in);
-        int x = Integer.parseInt(scan.next());
-        return x;
+        return Integer.parseInt(scan.next());
     }
 
     public static int exponentiation2(int x) {

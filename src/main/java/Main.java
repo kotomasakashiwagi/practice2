@@ -10,10 +10,10 @@ public class Main {
             WordPrinter.printExponentiation();
         }
         if (args[0].equals("2-4")) {
-            WordPrinter.printWord();
+            Calculator.printCalculateIntPair();
         }
         if (args[0].equals("2-5")) {
-            WordPrinter.printWord();
+            Calculator.printAverageXY();
         }
         if (args[0].equals("2-6")) {
             WordPrinter.printWord();

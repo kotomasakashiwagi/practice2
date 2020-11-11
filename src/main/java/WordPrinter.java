@@ -1,43 +1,41 @@
 import java.util.Scanner;
 
 public class WordPrinter {
-    public static String scanWord() { //１文字をスキャン
-        System.out.println("文字xを入力してください。");
-        Scanner scan = new Scanner(System.in);
-        return String.valueOf(scan.next());
-    }
+
 
     public static void printWord() {//一文字の出力
-        System.out.println(scanWord());
+        System.out.println(IntScanner.scanWord());
     }
 
     public static void printInt() {//Intの出力
-        System.out.println(scanInt());
+        System.out.println(IntScanner.scanInt());
     }
 
-    public static int scanInt() {//Int１文字のスキャン
-        System.out.println("数字xを入力してください。");
-        Scanner scan = new Scanner(System.in);
-        return Integer.parseInt(scan.next());
-    }
 
-    public static int exponentiation2(int x) {//２乗の計算
-        return (int) Math.pow(x, 2);
-    }
 
-    public static int exponentiation3(int x) {//３乗の計算
-        return (int) Math.pow(x, 3);
-    }
-
-    public static int exponentiation4(int x) {//４乗の計算
-        return (int) Math.pow(x, 4);
-    }
 
     public static void printExponentiation() {//２乗３乗４乗の出力
-        int x = scanInt();
-        System.out.println("x=" + x + " , " + "xの２乗：" + exponentiation2(x) + " , " + "xの3乗:" +
-                exponentiation3(x) + " , " + "xの4乗:" + exponentiation4(x));
+        int x = IntScanner.scanInt();
+        System.out.println("x=" + x + " , " + "xの２乗：" + Calculator.exponentiation2(x) + " , " + "xの3乗:" +
+                Calculator.exponentiation3(x) + " , " + "xの4乗:" + Calculator.exponentiation4(x));
     }
-
+    //2数字の四則演算を出力
+    public static void printCalculateIntPair() {
+        IntPair intPair = IntScanner.scan2Numbers();
+        IntPair QAudR = Calculator.calculateQAndR(intPair);
+        System.out.println("x+y = " + Calculator.plusXY(intPair) + ", x-y = " +
+                Calculator.minusXY(intPair) + ", x*y = "
+                + Calculator.timesXY(intPair) + ", x/y = " + QAudR.getX() + "..." + QAudR.getY());
+    }
+    //2数字の平均を出力
+    public  static  void printAverageXY(){
+        System.out.println(
+                Calculator.calculateAverage(IntScanner.scan2Numbers())
+        );
+    }
+    //おおよその生きた日数を出力
+    public static void printDays(){
+        System.out.println(Calculator.times365(IntScanner.scanAges()));
+    }
 
 }

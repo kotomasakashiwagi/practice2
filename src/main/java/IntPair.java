@@ -16,13 +16,14 @@ public class IntPair {
     }
 
     //equalsメソッドのオーバーライド
+    @Override
     public boolean equals(Object intPair) {
         if (intPair == this) {
             return true;
         }
         if (intPair instanceof IntPair) {
-            IntPair testintPair = (IntPair) intPair;
-            return (this.x == testintPair.x) && (this.y == testintPair.y);
+            IntPair intPair1 = (IntPair) intPair;
+            return (this.x == intPair1.x) && (this.y == intPair1.y);
         }
         return false;
     }

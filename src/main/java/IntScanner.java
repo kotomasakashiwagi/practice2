@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class IntScanner {
     //２数字のスキャン
     public static IntPair scan2Numbers() {
-        System.out.println("int型 xとyを入力してください。");
+        System.out.println("整数xとyを入力してください。例：2 3");
         java.util.Scanner scan = new java.util.Scanner(System.in);
         try {
             int x = Integer.parseInt(scan.next());

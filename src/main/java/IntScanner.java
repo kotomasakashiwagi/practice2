@@ -11,20 +11,18 @@ public class IntScanner {
             int y = Integer.parseInt(scan.next());
             return new IntPair(x, y);
         } catch (NumberFormatException e) {
-            throw new NumberFormatException();
-        }catch (ArrayIndexOutOfBoundsException e){
-            throw new ArrayIndexOutOfBoundsException();
+            throw e;
         }
 
     }
 
     public static int scanInt() {//Int１文字のスキャン
-        System.out.println("int型　数字xを入力してください。");
+        System.out.println("整数xを入力してください。");
         Scanner scan = new Scanner(System.in);
-        try{
+        try {
             return Integer.parseInt(scan.next());
-        }catch (NumberFormatException e){
-            throw new NumberFormatException();
+        } catch (NumberFormatException e) {
+            throw e;
         }
 
     }
@@ -37,15 +35,17 @@ public class IntScanner {
 
     //年齢のスキャン
     public static int scanAges() {
-        System.out.println("int型 xを入力してください。");
+        System.out.println("年齢を入力してください。");
         Scanner scan = new Scanner(System.in);
-        try{
+        try {
             int x = Integer.parseInt(scan.next());
-            if(x>=0){
+            if (x >= 0) {
                 return x;
-            }else {throw new IllegalArgumentException();}
-        }catch (NumberFormatException e){
-            throw new NumberFormatException();
+            } else {
+                throw new IllegalArgumentException("正しい数字を入れてください。");
+            }
+        } catch (NumberFormatException e) {
+            throw e;
         }
     }
 }

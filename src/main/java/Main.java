@@ -9,31 +9,27 @@ public class Main {
             try {
                 WordPrinter.printInt();
             } catch (NumberFormatException e) {
-                System.err.println("int型の数字を入力してください。");
+                System.err.println("整数を入力してください。");
             }
         } else if (args[0].equals("2-3")) {
             try {
                 WordPrinter.printExponentiation();
 
             } catch (NumberFormatException e) {
-                System.err.println("int型の数字を入力してください。");
+                System.err.println("整数を入力してください。");
             }
 
         } else if (args[0].equals("2-4")) {
             try {
                 WordPrinter.printCalculateIntPair();
             } catch (NumberFormatException e) {
-                System.err.println("int型の数字を入力してください。");
-            } catch (ArrayIndexOutOfBoundsException e) {
-                System.err.println("数字を二つ入力してください。");
+                System.err.println("整数を入力してください。例:2 4");
             }
         } else if (args[0].equals("2-5")) {
             try {
                 WordPrinter.printAverageXY();
             } catch (NumberFormatException e) {
-                System.err.println("int型の数字を入力してください。");
-            } catch (ArrayIndexOutOfBoundsException e) {
-                System.err.println("数字を二つ入力してください。");
+                System.err.println("整数を入力してください。例:2 4");
             }
 
         } else if (args[0].equals("2-6")) {
@@ -41,9 +37,9 @@ public class Main {
                 WordPrinter.printDays();
 
             } catch (NumberFormatException e) {
-                System.err.println("int型の数字を入力してください。");
-            }catch (IllegalArgumentException e){
-                System.err.println("正しい数字を入力してください。");
+                System.err.println("整数を入力してください。例:2 4");
+            } catch (IllegalArgumentException e) {
+                System.err.println(e.getMessage());
             }
 
         } else {
